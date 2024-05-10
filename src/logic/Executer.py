@@ -1,5 +1,7 @@
 import os
 
+from prettytable import PrettyTable
+
 from JavaLexer import JavaLexer
 from Listener import *
 
@@ -24,7 +26,7 @@ class Executer:
 
     def executeFiles(self):
         self.makeTable()
-        self.printIds()
+        self.printIdentifiers()
 
     def makeTable(self):
         for i in range(len(self.filePaths)):
@@ -40,7 +42,13 @@ class Executer:
             fileCopy = ' '.join(self.extractor.out)
             self.fileCopies.append(fileCopy)
 
-    def printIds(self):
+    def printIdentifiers(self):
+        table = PrettyTable(["Name", "Value", "FileName", "Line", "Type", "Var or ReturnType"])
         for i in range(len(self.identifiers)):
-            print(self.identifiers[i].name, self.identifiers[i].value, self.identifiers[i].fileName,
-                  self.identifiers[i].line, self.identifiers[i].type.value, self.identifiers[i].varOrReturnType, )
+            table.add_row([self.identifiers[i].name,
+                           self.identifiers[i].value if self.identifiers[i].value else '-',
+                           self.identifiers[i].fileName,
+                           self.identifiers[i].line,
+                           self.identifiers[i].type.value,
+                           self.identifiers[i].varOrReturnType if self.identifiers[i].varOrReturnType else '-'])
+        print(table)
