@@ -9,7 +9,7 @@ public class Main {
         public int getId();
     }
 
-    public static void main() {
+    public static void main(String[] args) {
         int a;
         int num1 = 10;
         int num2 = 5;
