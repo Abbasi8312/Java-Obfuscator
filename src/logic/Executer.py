@@ -1,7 +1,7 @@
 import os
 
-import JavaLexer
-import JavaParser
+from JavaLexer import JavaLexer
+from Listener import *
 
 
 class Executer:
@@ -24,17 +24,23 @@ class Executer:
 
     def executeFiles(self):
         self.makeTable()
+        self.printIds()
 
     def makeTable(self):
         for i in range(len(self.filePaths)):
             input_text = self.readJavaFile(os.path.join(self.filePaths[i], self.fileNames[i]))
-            input_stream = JavaParser.InputStream(input_text)
+            input_stream = InputStream(input_text)
             lexer = JavaLexer(input_stream)
-            stream = JavaParser.CommonTokenStream(lexer)
-            parser = JavaParser.JavaParser(stream)
+            stream = CommonTokenStream(lexer)
+            parser = JavaParser(stream)
             tree = parser.compilationUnit()  # Parse the entire compilation unit
-
-            walker = JavaParser.ParseTreeWalker()
+            self.extractor = Listener(self.filePaths[i], self.fileNames[i], self)
+            walker = ParseTreeWalker()
             walker.walk(self.extractor, tree)
             fileCopy = ' '.join(self.extractor.out)
             self.fileCopies.append(fileCopy)
+
+    def printIds(self):
+        for i in range(len(self.identifiers)):
+            print(self.identifiers[i].name, self.identifiers[i].value, self.identifiers[i].fileName,
+                  self.identifiers[i].line, self.identifiers[i].type.value, self.identifiers[i].varOrReturnType, )
