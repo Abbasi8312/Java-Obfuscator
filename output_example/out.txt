@@ -1,0 +1,37 @@
++-------------+----------------+---------------+------+--------------------------------+-------------------+
+|     Name    |     Value      |    FileName   | Line |              Type              | Var or ReturnType |
++-------------+----------------+---------------+------+--------------------------------+-------------------+
+|   Distance  |       -        | Distance.java |  3   |        classDeclaration        |      Distance     |
+|   distance  |       -        | Distance.java |  5   |       methodDeclaration        |       double      |
+|      x1     |       -        | Distance.java |  5   |      variableDeclaratorID      |        int        |
+|      y1     |       -        | Distance.java |  5   |      variableDeclaratorID      |        int        |
+|      x2     |       -        | Distance.java |  5   |      variableDeclaratorID      |        int        |
+|      y2     |       -        | Distance.java |  5   |      variableDeclaratorID      |        int        |
+|     main    |       -        | Distance.java |  12  |       methodDeclaration        |        void       |
+|     args    |       -        | Distance.java |  12  |      variableDeclaratorID      |      String[]     |
+|     Main    |       -        |   Main.java   |  1   |        classDeclaration        |        Main       |
+|    Season   |       -        |   Main.java   |  3   |        enumDeclaration         |         -         |
+|    Winter   |       -        |   Main.java   |  4   |          enumConstant          |       Season      |
+|    Summer   |       -        |   Main.java   |  4   |          enumConstant          |       Season      |
+|     Fall    |       -        |   Main.java   |  4   |          enumConstant          |       Season      |
+|     mmd     |       -        |   Main.java   |  7   |      interfaceDeclaration      |         -         |
+|   getName   |       -        |   Main.java   |  8   | interfaceCommonBodyDeclaration |        void       |
+|    getId    |       -        |   Main.java   |  9   | interfaceCommonBodyDeclaration |        int        |
+|     main    |       -        |   Main.java   |  12  |       methodDeclaration        |        void       |
+|     args    |       -        |   Main.java   |  12  |      variableDeclaratorID      |      String[]     |
+|      a      |       -        |   Main.java   |  13  |      variableDeclaratorID      |        int        |
+|     num1    |       10       |   Main.java   |  14  |      variableDeclaratorID      |        int        |
+|     num2    |       5        |   Main.java   |  15  |      variableDeclaratorID      |        int        |
+|    letter   |      'A'       |   Main.java   |  16  |      variableDeclaratorID      |        char       |
+|    isTrue   |      true      |   Main.java   |  17  |      variableDeclaratorID      |      boolean      |
+|     name    |     "John"     |   Main.java   |  18  |      variableDeclaratorID      |       String      |
+|     num3    |     5.67f      |   Main.java   |  19  |      variableDeclaratorID      |       float       |
+|  bigNumber  |  1000000000L   |   Main.java   |  20  |      variableDeclaratorID      |        long       |
+| smallNumber |      127       |   Main.java   |  21  |      variableDeclaratorID      |        byte       |
+|   smallInt  |     32767      |   Main.java   |  22  |      variableDeclaratorID      |       short       |
+|  anotherNum |     42.42      |   Main.java   |  23  |      variableDeclaratorID      |       double      |
+|     numX    | sum(num1,num2) |   Main.java   |  24  |      variableDeclaratorID      |       double      |
+|     sum     |       -        |   Main.java   |  28  |       methodDeclaration        |        int        |
+|      a      |       -        |   Main.java   |  28  |      variableDeclaratorID      |        int        |
+|      b      |       -        |   Main.java   |  28  |      variableDeclaratorID      |        int        |
++-------------+----------------+---------------+------+--------------------------------+-------------------+
