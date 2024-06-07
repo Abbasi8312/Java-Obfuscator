@@ -2,14 +2,14 @@ from enum import Enum
 
 
 class DeclarationType(Enum):
-    CLASS = "classDeclaration"
-    ENUM = "enumDeclaration"
-    METHOD = "methodDeclaration"
-    VARIABLE = "variableDeclaratorID"
-    ENUM_CONSTANT = "enumConstant"
-    INTERFACE = "interfaceDeclaration"
-    CONSTANT = "constantDeclarator"
-    INTERFACE_COMMON = "interfaceCommonBodyDeclaration"
+    CLASS = "7"
+    ENUM = "11"
+    METHOD = "20"
+    VARIABLE = "38"
+    ENUM_CONSTANT = "13"
+    INTERFACE = "15"
+    CONSTANT = "31"
+    INTERFACE_COMMON = "35"
 
 
 class Identifier:

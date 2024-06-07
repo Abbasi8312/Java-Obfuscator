@@ -1,0 +1,1 @@
+class NewDistance { static double newDistance ( int newX1 , int newY1 , int newX2 , int newY2 ) { return Math . sqrt ( Math . pow ( newX2 - newX1 , 2 ) + Math . pow ( newY2 - newY1 , 2 ) * 1.0 ) ; } public static void main ( String [ ] newArgs ) { System . out . println ( Math . round ( newDistance ( 3 , 4 , 4 , 3 ) * 100000.0 ) / 100000.0 ) ; } }

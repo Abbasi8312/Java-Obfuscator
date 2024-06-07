@@ -1,0 +1,1 @@
+public class NewTestClass1 { public static void main ( String [ ] newArgs ) { int newMain = 2 ; String newTestStr = "Test" ; int newTestInt = 1 ; } static void newTt ( ) { newTt ( ) ; newTt ( ) ; } }

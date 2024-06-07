@@ -57,6 +57,13 @@ class Listener(JavaParserListener):
                                         ctx.start.line,
                                         DeclarationType.INTERFACE_COMMON,
                                         ctx.parentCtx.getChild(0).getText())
+            case 31:
+                identifier = Identifier(ctx.getChild(0).getText(),
+                                        ctx.parentCtx.parentCtx.getChild(2).getText(),
+                                        self.fileName,
+                                        ctx.start.line,
+                                        DeclarationType.CONSTANT,
+                                        ctx.parentCtx.parentCtx.parentCtx.parentCtx.getChild(0).getText())
         if identifier is not None:
             self.executer.identifiers.append(identifier)
 
